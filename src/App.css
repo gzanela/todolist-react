@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #C9D6FF;
+  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input.form-control::placeholder {
+  opacity: .5;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.action-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
 }
-
-.App-link {
-  color: #61dafb;
+.todo-item:hover .todo-actions {
+  display: block;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-item {
+  padding: 20px;
+  font-size: 1.3rem;
+}
+.delivered-date {
+  font-size: 0.9rem;
+}
+.edit-input {
+  border: 1px solid lightgray;
+  font-size: 1.3rem;
+}
+.edit-input:focus {
+  outline: none;
+}
+.completed-text {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.todo-actions {
+  display: none;
+}
+.filter {
+  cursor: pointer;
+}
+.active {
+  font-weight: bold;
+}
+.footer-pipe::after {
+  content: " | ";
 }
